@@ -6,12 +6,21 @@ inspirational message,
 or nonsensical jokes. 
 To make your program truly random, the message that it outputs should be made up of at least three different pieces of data. Take what you know of JavaScript syntax so far to build the program and customize it to your liking.
 */
-const randomNumGenerator = () => {
+const randomNumGenerator = (num) => {
     return Math.floor(Math.random() * num)
 }
-const messageGenerator = (day,month) => {
-    let messages = []; 
-}
-console.log(randomNumGenerator())
 
-big test
+let horoscopeMessage = [];
+
+const messageGenerator = () => {
+     for (let horoscope in horoscopeMessage) {
+        let randomizer = randomNumGenerator(horoscopeMessage.length)
+        switch(horoscope){
+            case :
+        }
+     }
+}
+
+
+//console.log(randomNumGenerator())
+
