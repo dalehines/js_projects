@@ -9,6 +9,12 @@ To make your program truly random, the message that it outputs should be made up
 const randomNumGenerator = (num) => {
     return Math.floor(Math.random() * num)
 }
+horoscopeReadings = 
+{
+    signs:[],
+    personality:[],
+    forecast:[]
+}
 
 let horoscopeMessage = [];
 
@@ -16,11 +22,13 @@ const messageGenerator = () => {
      for (let horoscope in horoscopeMessage) {
         let randomizer = randomNumGenerator(horoscopeMessage.length)
         switch(horoscope){
-            case :
+            case signs:
+     return horoscopeMessage.push(horoscopeMessage[horoscope][randomizer])
+                break;
         }
      }
 }
 
 
-//console.log(randomNumGenerator())
+console.log(messageGenerator())
 
