@@ -9,26 +9,36 @@ To make your program truly random, the message that it outputs should be made up
 const randomNumGenerator = (num) => {
     return Math.floor(Math.random() * num)
 }
-horoscopeReadings = 
+const horoscopeReadings = 
 {
-    signs:[],
-    personality:[],
-    forecast:[]
+    signs:['aries','taurus','cancer','leo'],
+    personality:['energetic','depressed', 'happy','sad'],
+    forecast:['calm down','smile more', 'know when to hold up, know when to walk away, know when to run', 'go for a drink']
 }
 
 let horoscopeMessage = [];
 
-const messageGenerator = () => {
-     for (let horoscope in horoscopeMessage) {
-        let randomizer = randomNumGenerator(horoscopeMessage.length)
+
+     for (let horoscope in horoscopeReadings) {
+        let randomNumber = randomNumGenerator(horoscopeReadings[horoscope].length)
         switch(horoscope){
-            case signs:
-     return horoscopeMessage.push(horoscopeMessage[horoscope][randomizer])
-                break;
+            case 'signs':
+      horoscopeMessage.push(`Your star sign is ${horoscopeReadings[horoscope][randomNumber]}`)
+                break
+            case 'personality':
+                horoscopeMessage.push(`you are normally very ${horoscopeReadings[horoscope][randomNumber]}`)
+                break
+            case 'forecast': horoscopeMessage.push(`you should probably ${horoscopeReadings[horoscope][randomNumber]}`)
         }
      }
+
+
+const printMessage = (message) => {
+    let stringMessage = horoscopeMessage.join('\n');
+    console.log(stringMessage)
+
 }
 
-
-console.log(messageGenerator())
+//console.log(horoscopeReadings.signs)
+printMessage(horoscopeMessage)
 
