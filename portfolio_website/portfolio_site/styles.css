@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
@@ -19,8 +20,8 @@ nav{
     align-items: center;
 }
 nav img{
-    width:150px;
-    height:150px;
+    width:125px;
+    height: 125px;
 }
 
 .nav-links{
@@ -32,4 +33,23 @@ nav img{
     display:inline-block;
     padding:8px 12px;
     position:relative
+}
+/* change color and remove bullet points */
+.nav-links ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-links ul li::after{
+content:'';
+width: 0%;
+height: 2px;
+background: #f44336;
+display:block;
+margin:auto;
+transition:0.25s;
+}
+
+.nav-links ul li:hover::after{
+    width:100%
 }
