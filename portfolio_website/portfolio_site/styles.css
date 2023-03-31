@@ -2,15 +2,53 @@
     margin:0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior:smooth;
 }
 
-.header {
-    min-height:100vh;
+:root{
+    --bg-color:#1f242d;
+    --bg-color2:#323946;
+    --text-color: #fff;
+    --main-color:#db1819;
+
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+html{
+    overflow-x: hidden;
+    font-size: 62.5%;
+}
+
+body{
+    background:var(--bg-color);
+    color: var(--text-color);
+}
+section.home{
+    min-height: 100vh;
+    padding:10rem 9% 2rem ;
+}
+
+header {
+    
     width: 100%;
-    background-image: linear-gradient(rgba(254,249,230,0.7),rgba(4,9,30,0.7)),url(images/coding_background.jpeg);
-    background-position: center;
+    /* background-image: linear-gradient(rgba(254,249,230,0.7),rgba(4,9,30,0.7)),url(images/coding_background.jpeg); */
+    background-position: fixed;
     background-size: cover;
-    position: relative;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    display: flex;
 }
 
 nav{
@@ -24,34 +62,71 @@ nav img{
     height:150px;
 }
 
-.nav-links{
+.navbar{
     flex:1;
     text-align: right;
 }
-.nav-links ul li {
+.navbar ul li {
     list-style: none;
     display:inline-block;
     padding:8px 12px;
     position:relative
 }
 /* */ 
-.nav-links ul li a{
-    color:black;
+.navbar ul li a{
+    color:var(--text-color);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.7rem;
+    margin-left: 4rem;
+    transition: .3s;
 }
 
-/* Adds colored underline to navigation links */
-.nav-links ul li::after{
-    content: '';
-    width:0%;
-    height: 2px;
-    display:block;
-    background: #f44336;
-    transition: 0.25s;
-    margin:auto;
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color)
 }
 
-.nav-links ul li:hover::after{
-        width: 100%;
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
 }
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3{
+font-size: 3.2rem;
+font-weight: 700;
+}
+
+.home-content h1{
+    font-size: 4.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    }
+
+.home-img img{
+width: 35vw;
+}
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 3rem;
+    margin: 3rem 1.5rem 3rem 0;
+    color: var(--main-color);
+}
+
