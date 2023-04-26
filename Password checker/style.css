@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #4285f4;
+
+}
+
+.wrapper{
+    background: #fff;
+    width: 450px;
+    padding: 28px;
+    border-radius: 10px;
+}
+
+.wrapper .pass-field{
+    height: 65px;
+    width: 100%;
+    position: relative;
+}
