@@ -253,6 +253,10 @@ align-items: center;
     margin-bottom: 5rem;
  }
 
+ .home__button{
+    width: 100%;
+ }
+
  .home__social-link{
     display: inline-flex;
     background-color: var(--first-color);
@@ -270,4 +274,29 @@ align-items: center;
 
 /* ============== BUTTON ==============*/
 
+.button{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--first-color-lighten);
+    padding: 1rem 2rem;
+    font-weight: var(--font-semi-bold);
+    border-radius: 4rem;
+    transition: .2s;
+}
+
+.button:hover{
+    background-color: var(--first-color-dark);
+}
+
+.button__light{
+    background-color: var(--first-color-lighten) ;
+    color: var(--first-color);
+}
+
+.button__light:hover{
+    color: var(--first-color-lighten);
+
+}
+
+/* ============== ABOUT ==============*/
 
