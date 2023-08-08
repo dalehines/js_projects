@@ -92,12 +92,22 @@ a:hover{
     transition: var(--transition);
 }
 
+.btn-primary{
+    background: var(--color-white);
+    color: var(--color-bg);
+}
+
+
 .btn:hover{
     background: var(--color-white);
     color: var(--color-bg);
     border-color: transparent;
 }
-
+.btn-primary:hover{
+    background: var(--color-bg);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
 img{
     display: block;
     width: 100%;
