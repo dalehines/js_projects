@@ -12,10 +12,16 @@ Additionally, make sure that your interface has a Save To Spotify button and a S
 
 
 import React from 'react'
+import Nav from './components/nav/Nav'
+import SearchBar from './components/searchbar/SearchBar'
 
 const App = () => {
   return (
-    <div>App</div>
+
+    <>
+        <Nav />
+        <SearchBar />
+    </>
   )
 }
 
