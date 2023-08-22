@@ -32,6 +32,12 @@
     color: #fff;
     font-weight: 500;
   }
+
+
+.SearchBar input:focus{
+    outline: none;
+  }
+  
 .SearchButton:hover {
     background-color: rgba(60, 35, 138, 0.7);
   }

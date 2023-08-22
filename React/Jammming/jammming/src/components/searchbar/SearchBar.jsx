@@ -1,12 +1,22 @@
-import React, { useState} from 'react';
+import React, { useCallback, useState} from 'react';
 import './searchbar.css';
 
 const SearchBar = () => {
+    const [term, setTerm] = useState("");
 
-    const handleInputChange = () => {
-        
-    }
+    //prevents reload until seach button is clicked
+    const handleTermChange = ((event) => {
+        setTerm(event.target.value);
 
+    }, []);
+
+
+      const search = useCallback( () => {
+        props.onSearch(term);
+
+      }, [props.onSearch, term]);
+
+      
   return (
     <div className="SearchBar">
                 
