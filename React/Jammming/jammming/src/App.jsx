@@ -14,14 +14,25 @@ Additionally, make sure that your interface has a Save To Spotify button and a S
 import React from 'react'
 import Nav from './components/nav/Nav'
 import SearchBar from './components/searchbar/SearchBar'
+import SearchResults from './components/searchresults/SearchResults'
+import Track from './components/track/Track'
+import Tracklist from './components/tracklist/Tracklist'
+import Playlist from './components/playlist/Playlist'
 
 const App = () => {
   return (
-
-    <>
+    
+    <div>
+      <h1>
+        Ja<span className='highlight'>mmm</span>ing
+      </h1>
         <Nav />
         <SearchBar />
-    </>
+        <SearchResults />
+       <Playlist />
+       <Track />
+       <Tracklist />
+    </div>
   )
 }
 
