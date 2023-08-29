@@ -3,14 +3,15 @@ import TodoForm from './TodoForm'
 
 const TodoWrapper = () => {
  // State variables
-  const [todos,setTodos] = useState([])
+  const [todos,setTodos] = useState([]);
 
  const addTodo = todo => {
-  setTodos(...todos,{
+  setTodos([...todos,{
     id: crypto.randomUUID(), 
     task: todo, 
     completed:false, 
-    isEditing: false})
+    isEditing: false}])
+    console.log(todos)
  }
 
   return (
