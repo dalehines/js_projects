@@ -8,8 +8,8 @@ const Playlist = (props) => {
       (event) => {
         props.onNameChange(event.target.value);
       },
-      [props.onNameChange],
-    )
+      [props.onNameChange]
+    );
     
   return (
 
@@ -17,7 +17,11 @@ const Playlist = (props) => {
     <div className='Playlist'>
 
         <input onChange={handleNameChange} defaultValue={"New Playlist"}/>
-
+        <Tracklist 
+         tracks={props.playlistTracks}
+         isRemoval={true}
+         onRemove={props.onRemove}
+         />
 
     <button className="Playlist-save" onClick={props.onSave}> </button>
 
