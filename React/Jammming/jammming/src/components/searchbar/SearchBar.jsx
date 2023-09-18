@@ -6,16 +6,16 @@ const SearchBar = (props) => {
 
     //prevents reload until seach button is clicked
 
-    const handleTermChange = ((event) => {
+    const handleTermChange = useCallback((event) => {
         setTerm(event.target.value);
 
     }, []);
 
 
-      const search = useCallback( () => {
+    const search = useCallback( (props) => {
         props.onSearch(term);
 
-      }, [props.onSearch, term]);
+      }, [term]);
 
       
   return (

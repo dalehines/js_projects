@@ -24,7 +24,7 @@ const App = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
-  
+
   const search = useCallback((term) => {
     Spotify.search(term).then(setSearchResults);
   }, []);
@@ -58,28 +58,25 @@ const App = () => {
   }, [playlistName, playlistTracks]);
 
   return (
-    
     <div>
       <h1>
-        Ja<span className='highlight'>mmm</span>ing
+        Ja<span className="highlight">mmm</span>ing
       </h1>
-      <div className="App"></div>
-        
-        <SearchBar />
-        <SearchResults searchResults={searchResults} onAdd={addTrack}/>
-
-       <Playlist
-       playlistName={playlistName}
-       playlistTracks={playlistTracks}
-       onNameChange={updatePlaylistName}
-       onRemove={removeTrack}
-       onSave={savePlaylist} />
-
-
-       <Track />
-       <Tracklist />
+      <div className="App">
+        <SearchBar onSearch={search} />
+        <div className="App-playlist">
+          <SearchResults searchResults={searchResults} onAdd={addTrack} />
+          <Playlist
+            playlistName={playlistName}
+            playlistTracks={playlistTracks}
+            onNameChange={updatePlaylistName}
+            onRemove={removeTrack}
+            onSave={savePlaylist}
+          />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
