@@ -1,3 +1,5 @@
+
+
 export const getPets = async (type = '', query = '') => {
   const searchParams = new URLSearchParams({ type, query });
   const requestUrl = `/animals?${searchParams.toString()}`;
