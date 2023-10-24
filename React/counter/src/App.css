@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  border: 0;
+}
+.button{
+  
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  font-size: 2rem;
+  border: 1px black solid;
+  background-color: gray;
+}

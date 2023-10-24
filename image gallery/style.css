@@ -1,0 +1,19 @@
+*{
+   margin: 0; 
+   padding: 0;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #06283d;
+}
+
+.image-gallery{
+    border: #fff;
+    background: #fff;
+    width: 400px;
+    height: 40vh;
+}
