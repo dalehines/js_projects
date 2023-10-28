@@ -1,13 +1,20 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
 
+  const [count, setCount] = useState(0)
 
+  const handleIncrement = ()=>{
+     setCount(count + 1);
+  }
 
-  // const handleClick = (e) =>{
-  //   e.target.value
-  // }
-
+  const handleDecrement = ()=>{
+    if( count === 0) {
+      return
+    }
+    setCount(count - 1);
+  }
 
 
   return (
@@ -15,11 +22,12 @@ function App() {
         
           
           <div className='container'>
-          <p className='heading'>Lets start counting!</p>
+          <h1 className='heading'>Lets start counting!</h1>
+            <div className='count'>{count}</div>
           <div className=''></div>
         
-          <button className='button'>-</button>
-          <button className='button'>+</button>
+          <button onClick={handleDecrement} className='button-6'>-</button>
+          <button onClick={handleIncrement} className='button-6'>+</button>
           </div>
       
     </div>
