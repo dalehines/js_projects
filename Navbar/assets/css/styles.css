@@ -103,6 +103,12 @@ img{
     z-index: -1;
 }
 
+
+.search{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 /* ============ HEADER ============ */
 .header{
     position: fixed;
