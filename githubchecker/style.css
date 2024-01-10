@@ -36,6 +36,7 @@ body{
     border: 1px solid #999;
     border-radius: 6px;
 }
+
 .searchBox input{
     background-color: transparent;
     border: none;
@@ -77,7 +78,7 @@ body{
     height: 100px;
     width: 100px;
     margin-right: 10px;
-    border-radius: 70%;
+    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -99,4 +100,29 @@ body{
 .bio{
     font-size: 14px;
     margin-top: 10px;
+}
+
+.stats{
+    background-color: #20232c;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 6px;
+}
+
+.media{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.media p{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
 }
